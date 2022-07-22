@@ -3,6 +3,17 @@ from collections import OrderedDict
 import os
 import pathlib
 
+class CommonUtils:
+	@staticmethod
+	def absolute_to_relative_path(absolute_root_path, file_path):
+		return file_path
+		if file_path.startswith(absolute_root_path) and len(file_path) > len(absolute_root_path):
+			relative_path = file_path[len(absolute_root_path):]
+			if relative_path.startswith("/"):
+				relative_path = relative_path[1:]
+			return relative_path
+		return file_path
+
 class IOC_Repository:
 	FILE = "file"
 	URL = "url"
