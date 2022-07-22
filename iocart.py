@@ -40,9 +40,6 @@ class CoreEngine:
 
 def main(args):
 	core_engine = CoreEngine(args)
-	print("test")
-	if args.target_path is not None:
-		print(args.target_path)
 
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser(formatter_class=argparse.RawTextHelpFormatter, description="Magecart Hunter, match content on known regex IOCs.")
