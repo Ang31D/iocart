@@ -1,7 +1,16 @@
 import argparse
 from collections import OrderedDict
 
+class CoreSettings:
+	def __init__(self, args):
+		self.settings = OrderedDict()
+
+class CoreEngine:
+	def __init__(self, args):
+		self.settings = CoreSettings(args).settings
+
 def main(args):
+	core_engine = CoreEngine(args)
 	print("test")
 	if args.target_path is not None:
 		print(args.target_path)
