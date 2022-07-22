@@ -3,6 +3,11 @@ from collections import OrderedDict
 import os
 import pathlib
 
+class IOC_Repository:
+	FILE = "file"
+	URL = "url"
+	UNKNOWN = "unknown"
+
 class CoreSettings:
 	def __init__(self, args):
 		self.settings = OrderedDict()
